@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'Maven'
+        //maven 'Maven'
     }
     
     environment {
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo "building the application..."
                 echo "building version ${NEW_VERSION}"
-                sh "mvn install"
+                //sh "mvn install"
             }
         }
         
