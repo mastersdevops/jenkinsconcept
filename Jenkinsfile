@@ -6,9 +6,9 @@ pipeline {
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
     
-    tools {
+    //tools {
         //maven 'Maven'
-    }
+    //}
     
     environment {
         NEW_VERSION = '1.3.0'
@@ -39,7 +39,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo "deploying the application..."
-                echo "deploying version ${VERSION}"
+                echo "deploying version ${params.VERSION}"
                 //echo "${SERVER_CREDENTIALS}"
                 
                 withCredentials([
