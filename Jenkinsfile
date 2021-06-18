@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         NEW_VERSION = '1.3.0'
+        SERVER_CREDENTIALS = credentials('MyGitHub')
     }
 
     stages {
@@ -27,6 +28,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo "deploying the application..."
+                echo "${SERVER_CREDENTIALS}"
             }
         }      
     }
