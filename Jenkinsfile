@@ -31,9 +31,9 @@ pipeline {
                 //echo "${SERVER_CREDENTIALS}"
                 
                 withCredentials([
-                        usernamePassword(credentials: 'MyGitHub', usernameVariable: USR, passwordVariable: PWD)
+                        usernamePassword(credentials: 'MyGitHub', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PWD')
                     ]) {
-                        sh "some script ${USR} ${PWD}"
+                        sh "some script ${env}"
                     }
             }
         }      
