@@ -1,5 +1,6 @@
 def buildApp() {
   echo 'building the application...'
+  echo 'configuration trigger to pipeline'
 }
 
 def testApp() {
